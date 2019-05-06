@@ -8,7 +8,13 @@
     <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header">
+  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+  <div class="site-wrapper">
+    <div class="container">
+
+          <header class="main-header">
     <div class="container">
     <nav class="main-navigation">
       <div class="header-logo">
@@ -46,35 +52,37 @@
     </div>
   </div>
   </header>
+
+<section class="slider">
+  <div class="slider-controls">
+    <label for="product-1">Первый</label>
+    <label for="product-2">Второй</label>
+    <label for="product-3">Третий</label>
+  </div>
+  <ul class="slider-list">
+  <li class="slider-item slide" id="slide1">
+    <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
+    <a class="button slide-button" href="#">Давайте оба!</a>
+  </li>
+  <li class="slider-item slide" id="slide2">
+    <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
+    <a class="button slide-button" href="#">Давайте оба!</a>
+  </li>
+  <li class="slider-item slide" id="slide3">
+    <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
+    <a class="button slide-button" href="#">Давайте оба!</a>
+  </li>
+  </ul>
+</section>
+
+
+
+
+
+
   <main>
     <h1 class="visually-hidden">Gllacy Shop</h1>
-    <section class="slider">
-      <h2 class="visually-hidden">Карусель</h2>
-      <div class="slide">
-        <img src="img/slider-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="900" height="881">
-        <p>Крем-брюле и пломбир<br>
-          с малиновым джемом</p>
-        <a href="#" class="button">Давайте оба!</a>
-      </div>
-      <input type="radio" name="slide" id="slide1" checked="checked">
-      <label for="slide1"></label>
-      <div class="slide  visually-hidden">
-        <img src="img/slider-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="900" height="881">
-        <p>Шоколадный пломбир<br>
-          и лимонный сорбет</p>
-        <a href="#" class="button">Давайте оба!</a>
-      </div>
-      <input type="radio" name="slide" id="slide2">
-      <label for="slide2"></label>
-      <div class="slide  visually-hidden">
-        <img src="img/slider-3.png" alt="Пломбир с помадкой и клубничный щербет" width="900" height="881">
-        <p>Пломбир с помадкой<br>
-          и клубничный щербет</p>
-        <a href="#" class="button">Давайте оба!</a>
-      </div>
-      <input type="radio" name="slide" id="slide3">
-      <label for="slide3"></label>
-    </section>
+
     <section class="promo container">
       <h2 class="visually-hidden">Акции</h2>
       <div class="promo-item raspberry">
@@ -189,21 +197,39 @@
         и офлайн-магазина:<br>
         <span>ул. Большая Конюшенная<br>
           19/8, Санкт-Петербург</span>
-        <br>
+        </p>
+        <p>
         Для заказов по телефону:<br>
         <span>8 812 450-25-25</span><br>
-        (с 10 до 20 ежедневно) </p>
+        (с 10 до 20 ежедневно)
+      </p>
         <button class="button">Форма обратной связи</button>
       </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="#">Твиттер</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">ВКонтакте</a></li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/Twitter.svg" alt="Twitter" width="32" height="32">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/Inst.svg" alt="Instagram" width="32" height="32">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/Facebook.svg" alt="Facebook" width="32" height="32">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/Vk.svg" alt="ВКонтакте" width="32" height="32">
+            </a>
+          </li>
         </ul>
       </div>
       <div class="footer-menu">
@@ -237,13 +263,17 @@
               <label class="visually-hidden" for="password">Пароль</label>
             <input class="password" type="password" name="password" id="password" placeholder="Пароль">
           </p>
+          <div class="login-form-menu">
+            <button class="button" type="submit">Войти</button>
+          <div class="restore-menu">
           <p>
             <a class="restore" href="#">Забыли пароль?</a>
           </p>
           <p>
           <a class="restore" href="#">Новая регистрация</a>
           </p>
-          <button class="button" type="submit">Войти</button>
+        </div>
+        </div>
           </form>
           <button class="modal-close" type="button">Закрыть</button>
         </section>
@@ -263,17 +293,18 @@
               <label class="visually-hidden" for="name">Имя</label>
               <input class="name" type="text" name="name" id="name" placeholder="Как Вас зовут?">
             </p>
+            <p>
             <label class="visually-hidden" for="feedback-email">Почта для ответа</label>
             <input class="feedback-email" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
           </p>
-          <p>
+
             <textarea class="message" rows="4" cols="30"  placeholder="Напишите что-нибудь..."></textarea>
-            <p>
+
                 <button class="button" type="submit">Отправить</button>
             </form>
               <button class="modal-close" type="button">Закрыть</button>
           </section>
-
-
+        </div>
+      </div>
       </body>
       </html>
