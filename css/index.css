@@ -13,6 +13,11 @@ a {
   color: #fff;
 }
 
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
 input {
   padding: 0;
   padding-left: 14px;
@@ -136,21 +141,29 @@ display: none;
 
 .button {
   display: inline-block;
-  padding: 12px 44px;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
-  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
   vertical-align: top;
   text-decoration: none;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background: #f26843;
   background:  linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 32px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: none;
   cursor: pointer;
+  text-align: center;
+  border-radius: 24px;
+  padding: 12px 28px;
+}
+
+
+.slide-button {
+  padding: 12px 44px;
+  font-size: 32px;
+  line-height: 44px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  border-radius: 32px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .button:hover {
@@ -193,38 +206,120 @@ flex-direction: column;
 }
 
 .header-logo {
-margin-top: 9px;
+margin-top: 10px;
+}
+
+.main-navigation-wrapper {
+display: flex;
+justify-content: space-between;
+width: 1146px;
 }
 
 .site-navigation {
+  padding: 0;
   line-height: 18px;
   font-weight: 700;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top:30px;
-  width: 378px;
+  margin-top: 25px;
+  max-width: 385px;
 }
 
 .aside-navigation {
-  line-height: 18px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 500;
   list-style: none;
   display: flex;
-  margin-left: auto;
-  margin-top: 23px;
-  width: 272px;
-  justify-content:space-around;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  margin-top: 25px;
+  width: 263px;
 }
 
-.site-navigation a:hover,
-.aside-navigation a:hover,
-.site-navigation a:focus,
-.aside-navigation a:focus {
+.site-navigation .nav-button,
+.aside-navigation .nav-button {
+  display: block;
+  vertical-align: middle;
+  padding: 7px 15px;
+}
+
+.site-navigation .nav-button {
+  text-decoration: underline;
+  text-decoration-color:  rgba(255, 255, 255, 0.2);
+}
+
+.aside-navigation .nav-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: top;
+}
+
+.site-navigation .nav-button:hover,
+.aside-navigation .nav-button:hover,
+.site-navigation .nav-button:focus,
+.aside-navigation .nav-button:focus {
   color: #333;
+  background-color: #fff;
+  border-radius: 16px;
+  text-decoration: none;
 }
 
+.aside-navigation .nav-search {
+  width: 32px;
+  height: 32px;
+  font-size: 0px;
+  position: relative;
+}
 
+.aside-navigation .nav-search::before {
+  content: "";
+  background-color: #fff;
+  background: url("../img/search.svg") 0 0 no-repeat;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 7px;
+  left: 8px;
+}
+
+.aside-navigation .nav-login,
+.aside-navigation .nav-cart {
+padding-left: 45px;
+position: relative;
+}
+
+.aside-navigation .nav-cart {
+  padding-right: 34px;
+}
+
+.aside-navigation .nav-login::before,
+.aside-navigation .nav-cart::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  top: 6px;
+  left: 16px;
+}
+
+.aside-navigation .nav-login::before {
+    background: url("../img/Entry.svg") 0 0 no-repeat;
+    width: 21px;
+    height: 19px;
+}
+
+.aside-navigation .nav-cart::before {
+    background: url("../img/Cart.svg") 0 0 no-repeat;
+    width: 21px;
+    height: 20px;
+}
 
 .slide p {
   font-size: 60px;
@@ -242,6 +337,7 @@ margin-top: 9px;
   padding: 23px 20px;
   box-sizing: border-box;
   border-radius: 13px;
+  position: relative;
 }
 
 .promo h3 {
@@ -262,7 +358,9 @@ margin-top: 9px;
 }
 
 .promo .button {
-  margin-left: 374px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
 
 .raspberry {
@@ -553,10 +651,6 @@ margin-bottom: 0;
   justify-content: space-between;
 }
 
-.login-form-menu button {
-  width: 100px;
-}
-
 .modal-search {
   height: 84px;
   width: 340px;
@@ -605,7 +699,6 @@ margin-bottom: 15px;
 
 .feedback-form .button {
   margin-left: 290px;
-  width: 140px;
 }
 
 .restore {
