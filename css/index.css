@@ -71,7 +71,8 @@ transition:background-image 0.5s ease, background-image 0.5s ease;
 position: relative;
 text-align: center;
 color: #fff;
-padding-top: 430px;
+padding-top: 280px;
+padding-bottom: 40px;
 }
 
 .slide {
@@ -90,11 +91,12 @@ display: none;
   font-size: 60px;
   line-height: 60px;
   font-weight: 800;
+  width: 670px;
 }
 
 .slider-controls {
   position: absolute;
-  left: 0;
+  left: 125;
   bottom: 63px;
   font-size: 0;
   z-index: 20;
@@ -122,6 +124,12 @@ display: none;
 #product-2:checked ~ .site-wrapper label[for="product-2"],
 #product-3:checked ~ .site-wrapper label[for="product-3"] {
   background-color: #fff;
+}
+
+.site-wrapper label[for="product-1"]:hover,
+.site-wrapper label[for="product-2"]:hover,
+.site-wrapper label[for="product-3"]:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 #product-1:checked ~ .site-wrapper {
@@ -155,7 +163,6 @@ display: none;
   border-radius: 24px;
   padding: 12px 28px;
 }
-
 
 .slide-button {
   padding: 12px 44px;
@@ -270,6 +277,16 @@ width: 1146px;
   background-color: #fff;
   border-radius: 16px;
   text-decoration: none;
+  outline: none;
+}
+
+.site-navigation .nav-button:active {
+  color: #333;
+  background-color: #fff;
+  border-radius: 16px;
+  text-decoration: none;
+  outline: none;
+  box-shadow:  inset 0px 1px 2px 1px rgba(105, 105, 105, 0.6);
 }
 
 .aside-navigation .nav-search {
@@ -279,16 +296,25 @@ width: 1146px;
   position: relative;
 }
 
-.aside-navigation .nav-search::before {
-  content: "";
-  background-color: #fff;
-  background: url("../img/Search.svg") 0 0 no-repeat;
+.aside-navigation .nav-search svg {
   position: absolute;
-  width: 17px;
-  height: 17px;
   top: 7px;
   left: 8px;
 }
+
+.aside-navigation .nav-search:hover path,
+.aside-navigation .nav-login:hover path,
+.aside-navigation .nav-login:hover polygon,
+.aside-navigation .nav-cart:hover path,
+.aside-navigation .nav-cart:hover circle,
+.aside-navigation .nav-search:focus path,
+.aside-navigation .nav-login:focus path,
+.aside-navigation .nav-login:focus polygon,
+.aside-navigation .nav-cart:focus path,
+.aside-navigation .nav-cart:focus circle {
+  fill: black;
+}
+
 
 .aside-navigation .nav-login,
 .aside-navigation .nav-cart {
@@ -300,25 +326,11 @@ position: relative;
   padding-right: 34px;
 }
 
-.aside-navigation .nav-login::before,
-.aside-navigation .nav-cart::before {
-  content: "";
-  background-color: #fff;
+.aside-navigation .nav-login svg,
+.aside-navigation .nav-cart svg {
   position: absolute;
   top: 6px;
   left: 16px;
-}
-
-.aside-navigation .nav-login::before {
-    background: url("../img/Entry.svg") 0 0 no-repeat;
-    width: 21px;
-    height: 19px;
-}
-
-.aside-navigation .nav-cart::before {
-    background: url("../img/Cart.svg") 0 0 no-repeat;
-    width: 21px;
-    height: 20px;
 }
 
 .slide p {
