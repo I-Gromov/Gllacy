@@ -282,7 +282,7 @@ width: 1146px;
 .aside-navigation .nav-search::before {
   content: "";
   background-color: #fff;
-  background: url("../img/search.svg") 0 0 no-repeat;
+  background: url("../img/Search.svg") 0 0 no-repeat;
   position: absolute;
   width: 17px;
   height: 17px;
