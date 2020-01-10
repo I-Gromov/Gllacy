@@ -205,6 +205,10 @@ display: flex;
 flex-direction: column;
 }
 
+.main-header {
+  position: relative;
+}
+
 .header-phone {
   font-weight: 700;
   align-self: flex-end;
@@ -302,6 +306,50 @@ width: 1146px;
   text-decoration: none;
   outline: none;
   box-shadow:  inset 0px 1px 2px 1px rgba(105, 105, 105, 0.6);
+}
+
+.catalog {
+  position: relative;
+}
+
+.catalog-submenu {
+display: none;
+position: absolute;
+top: 37px;
+left: 2px;
+list-style: none;
+margin: 0;
+padding: 0;
+background-color: #f8f7f4;
+width: 143px;
+border-radius: 4px;
+z-index:100;
+}
+
+.catalog-submenu
+
+.catalog-submenu a {
+  display: block;
+  color: #323232;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400px;
+  padding: 8px 0px 8px 20px;
+  outline: none;
+}
+
+.catalog-submenu li:first-child::after {
+  font-weight: bold;
+  border-bottom: 1px #d1d0ce solid;
+}
+
+.catalog-submenu a:hover,
+.catalog-submenu a:focus {
+  background-color: #fbded7;
+}
+
+.catalog-submenu a:active {
+  background-color: #f6b5a5;
 }
 
 .aside-navigation .nav-search {
@@ -772,22 +820,8 @@ padding: 11px 27px;
 .modal {
   background-color: #f8f7f4;
   box-sizing: border-box;
-}
-
-.modal-login {
-  width: 277px;
-  height: 214px;
-  margin-bottom: 50px;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.modal-feedback {
-  width: 477px;
-  height: 442px;
-  padding: 20px 25px 25px 25px;
-  border-radius: 9px;
-  position: relative;
+  z-index: 2;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .modal-search {
@@ -796,6 +830,48 @@ padding: 11px 27px;
   padding: 20px 15px;
   margin-bottom: 20px;
   border-radius: 5px;
+  position: absolute;
+  top: 60px;
+  right: 332px;
+  display: none;
+}
+
+.modal-login {
+  width: 277px;
+  height: 214px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 60px;
+  right: 229px;
+  z-index: 3;
+  display: none;
+}
+
+.modal-feedback {
+  position: fixed;
+
+  top: 340px;
+  left: 50%;
+  margin-left: -238px;
+  width: 477px;
+  height: 442px;
+  padding: 20px 25px 25px 25px;
+  border-radius: 9px;
+  display: none;
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.3);
+z-index: 1;
+display: none;
 }
 
 .modal p {
@@ -913,4 +989,8 @@ padding-top: 14px;
 .restore-menu {
   width: auto;
   text-align: right;
+}
+
+.modal-show {
+  display: block;
 }

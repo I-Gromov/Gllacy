@@ -22,8 +22,15 @@
           </div>
           <div class="main-navigation-wrapper">
           <ul class="site-navigation">
-            <li>
+            <li class="catalog">
               <a class="nav-button" href="catalog.html">Каталог</a>
+              <ul class="catalog-submenu">
+                  <li><a href="#">Новинки</a></li>
+                  <li><a href="#">Сливочное</a></li>
+                  <li><a href="#">Щербеты</a></li>
+                  <li><a href="#">Фруктовый лед</a></li>
+                  <li><a href="#">Мелорин</a></li>
+              </ul>
             </li>
             <li>
               <a class="nav-button" href="#.html">Доставка и оплата</a>
@@ -81,6 +88,7 @@
           </p>
         </div>
       </div>
+
     </header >
     <section class="slider container">
       <div class="slider-controls">
@@ -329,62 +337,69 @@
                 </p>
               </div>
             </footer>
-            <section class="modal modal-login">
-              <h2  class="visually-hidden">Личный кабинет</h2>
-              <form class="login-form" action="echo.htmlacademy.ru" method="post">
-                <p>
-                  <label class="visually-hidden" for="email">Электронная почта</label>
-                  <input class="email inputbox" type="email" name="email" id="email" placeholder="Электронная почта">
-                </p>
-                <p>
-                  <label class="visually-hidden" for="password">Пароль</label>
-                  <input class="password inputbox" type="password" name="password" id="password" placeholder="Пароль">
-                </p>
-                <div class="login-form-menu">
-                  <button class="login-button button" type="submit">Войти</button>
-                  <div class="restore-menu">
-                    <p>
-                      <a class="restore link" href="#">Забыли пароль?</a>
-                    </p>
-                    <p>
-                      <a class="restore link" href="#">Новая регистрация</a>
-                    </p>
-                  </div>
-                </div>
-              </form>
-            </section>
-            <section class="modal modal-search">
-              <h2 class="visually-hidden">Поиск</h2>
-              <form class="search-form">
-                <input  class="search inputbox" type="search" name="search" placeholder="Что ищем?">
-              </form>
-            </section>
-            <section class="modal modal-feedback">
-              <h2 class="visually-hidden">Обратная связь</h2>
-              <div class="feedback-title-wrapper">
-              <p class="feedback-title">Мы обязательно Вам ответим!</p>
-              <button class="modal-close" type="button">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                	 width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
-                <polygon fill="#231F20" points="17.454,1.46 16.04,0.046 9,7.086 1.96,0.046 0.546,1.46 7.586,8.5 0.546,15.54 1.96,16.954 9,9.914
-                	16.04,16.954 17.454,15.54 10.414,8.5 "/>
-                </svg>
-                Закрыть
-              </button>
-            </div>
-              <form class="feedback-form">
-                <p>
-                  <label class="visually-hidden" for="name">Имя</label>
-                  <input class="feedback-name  inputbox" type="text" name="name" id="name" placeholder="Как Вас зовут?">
-                </p>
-                <p>
-                  <label class="visually-hidden" for="feedback-email">Почта для ответа</label>
-                  <input class="feedback-email inputbox" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
-                </p>
-                <textarea class="feedback-message inputbox" rows="4" cols="30"  placeholder="Напишите что-нибудь..."></textarea>
-                <button class="button" type="submit">Отправить</button>
-              </form>
-            </section>
           </div>
+
+          <section class="modal modal-login">
+            <h2  class="visually-hidden">Личный кабинет</h2>
+            <form class="login-form" action="echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="email">Электронная почта</label>
+                <input class="email inputbox" type="email" name="email" id="email" placeholder="Электронная почта">
+              </p>
+              <p>
+                <label class="visually-hidden" for="password">Пароль</label>
+                <input class="password inputbox" type="password" name="password" id="password" placeholder="Пароль">
+              </p>
+              <div class="login-form-menu">
+                <button class="login-button button" type="submit">Войти</button>
+                <div class="restore-menu">
+                  <p>
+                    <a class="restore link" href="#">Забыли пароль?</a>
+                  </p>
+                  <p>
+                    <a class="restore link" href="#">Новая регистрация</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <section class="modal modal-search">
+            <h2 class="visually-hidden">Поиск</h2>
+            <form class="search-form">
+              <input  class="search inputbox" type="search" name="search" placeholder="Что ищем?">
+            </form>
+          </section>
+
+          <section class="modal modal-feedback">
+            <h2 class="visually-hidden">Обратная связь</h2>
+            <div class="feedback-title-wrapper">
+            <p class="feedback-title">Мы обязательно Вам ответим!</p>
+            <button class="modal-close" type="button">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+              <polygon fill="#231F20" points="17.454,1.46 16.04,0.046 9,7.086 1.96,0.046 0.546,1.46 7.586,8.5 0.546,15.54 1.96,16.954 9,9.914
+                16.04,16.954 17.454,15.54 10.414,8.5 "/>
+              </svg>
+              Закрыть
+            </button>
+          </div>
+            <form class="feedback-form">
+              <p>
+                <label class="visually-hidden" for="name">Имя</label>
+                <input class="feedback-name  inputbox" type="text" name="name" id="name" placeholder="Как Вас зовут?">
+              </p>
+              <p>
+                <label class="visually-hidden" for="feedback-email">Почта для ответа</label>
+                <input class="feedback-email inputbox" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
+              </p>
+              <textarea class="feedback-message inputbox" rows="4" cols="30"  placeholder="Напишите что-нибудь..."></textarea>
+              <button class="button" type="submit">Отправить</button>
+            </form>
+          </section>
+          <div class="modal-overlay"></div>
+
+
+          <script src="js/script.js"></script>
         </body>
         </html>
