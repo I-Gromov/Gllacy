@@ -63,7 +63,6 @@ feedbackButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   feedbackPopup.classList.add("modal-show");
   overlay.classList.add("modal-show");
-  name.focus();
 });
 
 closeButton.addEventListener("click", function() {

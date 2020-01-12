@@ -686,8 +686,10 @@ padding: 0;
   padding-top: 60px;
   padding-left: 870px;
   box-sizing: border-box;
-
+  position: relative;
 }
+
+
 .contact-window {
   background-color: #fff;
   color: #323232;
@@ -698,6 +700,18 @@ padding: 0;
   border-radius: 13px;
   box-sizing: border-box;
   padding: 31px 25px;
+  top: 62;
+  right: 52;
+  z-index: 2;
+  position: absolute;
+}
+
+.contact iframe {
+  position: absolute;
+  border: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .contact-window p {
@@ -993,4 +1007,23 @@ padding-top: 14px;
 
 .modal-show {
   display: block;
+}
+
+.modal-feedback.modal-show {
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
