@@ -703,7 +703,7 @@ padding: 0;
   top: 62;
   right: 52;
   z-index: 2;
-  position: absolute;
+  position: relative;
 }
 
 .contact iframe {
@@ -865,7 +865,7 @@ padding: 11px 27px;
 
 .modal-feedback {
   position: fixed;
-
+  z-index: 5;
   top: 340px;
   left: 50%;
   margin-left: -238px;
@@ -884,7 +884,7 @@ left: 0;
 width: 100%;
 height: 100%;
 background-color: rgba(0,0,0,0.3);
-z-index: 1;
+z-index: 3;
 display: none;
 }
 
